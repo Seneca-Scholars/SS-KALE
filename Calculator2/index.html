@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="cointainer">
+        <div class="calculator">
+            <input type="text" id = "textInput" placeholder ="Enter Number">
+            <div>
+                <input type = "button" class="operator-btn" value = "+">
+                <input type = "button" class ="num-btn" value = "7">
+                <input type = "button" class ="num-btn" value = "8">
+                <input type = "button" class ="num-btn" value = "9">
+            </div>
+            <div>
+                <input type = "button" class="operator-btn" value = "-">
+                <input type = "button" class ="num-btn" value = "4">
+                <input type = "button" class ="num-btn" value = "5">
+                <input type = "button" class ="num-btn" value = "6">
+            </div>
+            <div>
+                <input type = "button" class="operator-btn" value = "*">
+                <input type = "button" class ="num-btn" value = "1">
+                <input type = "button" class ="num-btn" value = "2">
+                <input type = "button" class ="num-btn" value = "3">
+            </div>
+            <div>
+                <input type = "button" class="operator-btn" value = "/">
+                <input type = "button" class ="num-btn" value = "0">
+                <input type = "button" class ="num-btn" value = ".">
+                <input type = "button" id ="equals-btn" value = "=">
+            </div>
+            <div>
+            <input type = "button" id ="clear-btn" value = "C">
+        </div>
+        
+    </div>
+
+    <script>
+        const display = document.getElementById("textInput");
+
+        const numberinput = document.getElementsByClassName("num-btn")
+
+        const operationInput = document.getElementsByClassName("operator-btn")
+
+        const equalInput = document.getElementById("equals-btn")
+
+        const clearInput = document.getElementById("clear-btn")
+
+        function appendToDisplay(input){
+            display.value += input;
+        }""
+        for (let i = 0; i < numberButtons.length; i++) {
+            numberButtons[i]
+        }
+
+        function clearDisplay(){
+            display.value = "";
+        }
+        function calculate(){
+            display.value = eval(display.value)
+        }
+    </script>
+</body>
+</html>
