@@ -41,29 +41,43 @@
     </div>
 
     <script>
-        const display = document.getElementById("textInput");
 
-        const numberinput = document.getElementsByClassName("num-btn")
+        const nums = document.getElementsByClassName("num");
+        const display = document.getElementById("display");
+        const operation = document.getElementsByClassName("operation");
+        const equal = document.getElementById("equal");
+        const ac = document.getElementById("AC");
+        const de = document.getElementById("DE");
 
-        const operationInput = document.getElementsByClassName("operator-btn")
-
-        const equalInput = document.getElementById("equals-btn")
-
-        const clearInput = document.getElementById("clear-btn")
-
-        function appendToDisplay(input){
-            display.value += input;
-        }""
-        for (let i = 0; i < numberButtons.length; i++) {
-            numberButtons[i]
+        function addToDisplay() {
+            display.value += this.value;
         }
 
-        function clearDisplay(){
-            display.value = "";
+        for (let i = 0; i < nums.length; i++) {
+            nums[i].addEventListener('click', addToDisplay);
         }
-        function calculate(){
-            display.value = eval(display.value)
+
+        for (let i = 0; i < operation.length; i++) {
+            operation[i].addEventListener('click', addToDisplay);
         }
+
+        function solve(){
+            display.value = eval(display.value);
+        }
+
+        equal.addEventListener('click', solve);
+
+        function clear(){
+            display.value = '';
+        }
+
+        ac.addEventListener('click', clear);
+
+
+        function del(){
+            display.value = display.value.slice (0, -1) 
+        }
+
     </script>
 </body>
 </html>
